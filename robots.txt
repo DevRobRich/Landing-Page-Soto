@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ilumino-cuba.vercel.app/sitemap.xml
