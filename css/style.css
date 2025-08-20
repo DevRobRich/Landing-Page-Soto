@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css?family=Calligraffitti|Mali");
+/* ganeral style */
+:root {
+  --mainYellow: #fdbe02;
+  --mainWhite: #fff;
+  --mainBlack: #071013;
+  --mainGrey: #9b9999;
+  --TransGrey: rgba(0, 0, 0, 0.1);
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Mali", cursive;
+}
+.text-slanted {
+  font-family: "Calligraffitti", cursive;
+}
+.btn-yellow{
+    font-size: 1.2rem;
+    color: var(--mainBlack);
+    background: var(--mainYellow);
+    text-transform: capitalize;
+}
+.btn-yellow:hover{
+    background: var(--mainBlack);
+    color: var(--mainYellow);
+}
+.btn-black{
+    color: var(--mainBlack);
+    background: transparent !important;
+    font-size: 1.2rem;
+    border: 0.1rem solid var(--mainBlack);
+}
+.btn-black:hover{
+    color: var(--mainWhite);
+    background: var(--mainBlack) !important;
+}
+.text-yellow{
+    color: var(--mainYellow);
+}
+.banner-product{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/pageBcg/productsBcg.jpeg) center/cover fixed no-repeat;
+    min-height: 60vh;
+}
+.banner-single-product{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/pageBcg/singleBcg.jpeg) center/cover fixed no-repeat;
+    min-height: 60vh;
+}
+.banner-store{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/pageBcg/storeBcg.jpeg) center/cover fixed no-repeat;
+    min-height: 60vh;
+}
+/* end of ganeral style */
+/* navbar */
+.navbar-toggler{
+    outline: none !important;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--mainYellow) !important;
+}
+.nav-link{
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid var(--mainWhite);
+}
+.nav-active{
+    border-bottom: 0.1rem solid var(--mainYellow);
+}
+.navbar-icon{
+    font-size: 1.5rem;
+}
+.navbar-social-icon{
+    color: var(--mainBlack);
+    position: relative;
+    transition: 0.5s all ease;
+}
+.navbar-social-icon:hover{
+    color: var(--mainGrey);
+}
+.cart-items{
+    color: var(--mainWhite);
+    position: absolute;
+    font-size: 0.2rem;
+    top: -15%;
+    right: -25%;
+    background: var(--mainYellow);
+    border-radius: 50%;
+    padding: 0.2rem 0.3rem;
+}
+/* Botón de contactar en el header */
+.btn-contactar {
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-contactar:hover {
+  background-color: var(--mainBlack);
+  color: var(--mainYellow);
+}
+
+
+/* end of navbar */
+/* banner */
+.banner{
+    min-height: calc(100vh - 101px);
+    background: url(../img/pageBcg/bannerBcg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 8em;
+    color: #fff;
+}
+/* end of banner */
+/* single product photo */
+.single-product-photo{
+    background: var(--TransGrey);
+    opacity: 0.5;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    border: 0.1rem solid transparent;
+    box-sizing: border-box !important;
+}
+.rating-icon{
+    color: var(--mainYellow);
+}
+.product-size{
+    word-spacing: 1.5rem;
+}
+.single-product-photo:hover{
+    border: 0.1rem solid var(--mainYellow);
+    opacity: 1;
+}
+.product-info-link{
+    text-decoration: none;
+    color: var(--mainGrey);
+    transition: all 0.3s ease-in-out;
+}
+.product-info-link:hover{
+    color: var(--mainYellow);
+    text-decoration: none;
+}
+/* end of single product photo */
+/* services */
+.service-icon{
+    font-size: 2rem;
+    background: var(--mainGrey);
+    color: var(--mainYellow);
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+}
+/* end of services */
+/* categories */
+.categorie-link{
+    color: var(--mainBlack);
+    text-decoration: none;
+}
+.categorie-link:hover{
+    color: var(--mainGrey);
+    text-decoration: none;
+}
+.categorie-underline{
+    height: 0.1rem;
+    width: 5rem;
+    background: var(--mainYellow);
+}
+.category-container{
+    position: relative;
+}
+.category-img{
+    transition: all 1s linear;
+}
+.category-container:hover .category-img{
+    opacity: 0.5;
+}
+.category-link{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--mainWhite);
+    color: var(--mainBlack);
+    padding: 0.2rem 3rem 0.2rem 0.2rem;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    text-decoration: none;
+    transition: all 1s linear;
+    opacity: 0;
+}
+.category-container:hover .category-link{
+    opacity: 1;
+    text-decoration: none;
+}
+/* end of categories */
+
+
+
+/* Contenedor del slider con altura fija para evitar saltos */
+#work-slider .carousel-inner {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tamaño uniforme de imágenes, centradas y sin deformación */
+#work-slider .carousel-item img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Indicadores tipo puntos - botones */
+.carousel-indicators {
+  position: relative;
+  bottom: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Cada punto */
+.carousel-indicators button {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: none;
+  opacity: 0.5;
+  transition: background-color 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+
+/* Punto activo */
+.carousel-indicators .active {
+  background-color: #ff9800;
+  opacity: 1;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  #work-slider .carousel-inner {
+    height: 300px;
+  }
+  #work-slider .carousel-item img {
+    height: 300px;
+  }
+}
+
+
+
+
+/* products category */
+.products-categories-underline{
+    height: 0.2rem;
+    width: 5rem;
+    background: var(--mainYellow);
+}
+.products-category-link{
+    text-decoration: none;
+    color: var(--mainBlack);
+}
+.products-category-link:hover{
+    color: var(--mainGrey);
+    text-decoration: none;
+}
+.products-color{
+    height: 1rem;
+    width: 1rem;
+}
+.products-color-black{
+    background: var(--mainBlack);
+}
+.products-color-blue{
+    background: blue;
+}
+.products-color-green{
+    background: green;
+}
+.products-color-yellow{
+    background: yellow;
+}
+.products-color-red{
+    background: red;
+}
+/* end of products category */
+
+/* home filler */
+.home-filler{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/pageBcg/home-filler.jpeg) center/cover fixed no-repeat;
+    min-height: 60vh;
+}
+
+
+/* end of home filler */
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px; /* altura fija */
+  object-fit: cover; /* recorta para mantener proporciones */
+  border-radius: 8px;
+}
+
+.product-card h5 {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+/* partners */
+.partners {
+  background: var(--TransGrey);
+}
+
+/* Mostrar flechas visibles */
+.carousel-control-prev,
+.carousel-control-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--mainBlack);
+  opacity: 0.7;
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 0.5rem;
+}
+
+.carousel-control-next {
+  right: 0.5rem;
+}
+
+/* Ocultar indicadores (puntos) */
+.carousel-indicators {
+  display: none;
+}
+
+/* Contenedor fijo para evitar cambio de tamaño */
+.carousel-inner {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cada item igual altura */
+.carousel-item {
+  height: 180px;
+}
+
+/* Imágenes centradas y uniformes */
+.logo-img {
+  max-width: 80%;
+  max-height: 180px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsive para móviles */
+@media (max-width: 576px) {
+  .logo-img {
+    max-width: 90%;
+    max-height: 120px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+
+
+
+/* empresario section (antes newsletter) */
+.newsletter {
+  background: #fff; /* fondo blanco uniforme */
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Foto del empresario */
+.entrepreneur-photo img {
+  max-width: 300px; /* tamaño máximo */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%; /* circular */
+  border: 4px solid var(--mainYellow);
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .entrepreneur-photo img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .entrepreneur-photo img {
+    max-width: 180px;
+  }
+}
+
+/* skills section */
+.skills {
+  background: var(--mainBlack);
+  padding: 3rem 1rem;
+}
+
+.skill-icon {
+  color: var(--mainYellow);
+  font-size: 2.5rem; /* más grande para destacar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  margin-right: 1rem;
+}
+
+.skill-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.skill-text p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-text h3 {
+    font-size: 1.1rem;
+  }
+  .skill-text p {
+    font-size: 0.9rem;
+  }
+  .skill-icon {
+    font-size: 2rem;
+    min-width: 50px;
+  }
+}
+
+/* end of skills section */
+/* footer section */
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+/* título */
+.footer-title {
+  padding: 0.4rem 1rem;
+  border: 0.2rem solid var(--mainYellow);
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mainYellow);
+  margin-bottom: 2rem;
+}
+
+/* Íconos de redes sociales */
+.footer-icons {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-icon {
+  color: var(--mainYellow);
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.footer-icon:hover {
+  color: var(--mainWhite);
+  background-color: var(--mainYellow);
+  cursor: pointer;
+}
+
+/* bloques de contacto */
+.footer-contact {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* espacio entre bloques */
+}
+
+.footer-contact > div {
+  flex: 1 1 250px;
+  max-width: 300px;
+  font-size: 1.2rem; /* texto más grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  color: var(--mainYellow);
+  margin-right: 0.8rem;
+  font-size: 1.6rem; /* íconos más grandes */
+}
+
+/* copyright */
+.footer p.text-muted {
+  color: #ccc;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+/* Desktop */
+@media (min-width: 769px) {
+  .footer-contact {
+    justify-content: space-evenly;
+  }
+  .footer-contact > div {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+/* Tablet y móvil */
+@media (max-width: 768px) {
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer-contact > div {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .footer-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+  .footer-title {
+    font-size: 1.3rem;
+  }
+}
